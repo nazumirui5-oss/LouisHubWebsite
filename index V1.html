@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Hub | Premium Roblox Script Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b0f19; /* Darker navy background */
+        }
+        
+        /* Grid background effect */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+        }
+
+        /* Ambient Glows */
+        .ambient-glow-1 {
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, rgba(0,0,0,0) 70%);
+        }
+        .ambient-glow-2 {
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.12) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        /* Custom Keyframe Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.2); }
+            50% { box-shadow: 0 0 35px rgba(236, 72, 153, 0.5); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen flex flex-col justify-between bg-grid relative overflow-x-hidden">
+
+    <!-- Ambient background light elements -->
+    <div class="absolute top-10 left-1/4 w-[500px] h-[500px] ambient-glow-1 pointer-events-none -z-10"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] ambient-glow-2 pointer-events-none -z-10"></div>
+
+    <!-- Navigation Bar -->
+    <header class="border-b border-slate-800/80 bg-slate-950/70 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-500 to-pink-500">
+                    LOUIS HUB
+                </span>
+            </div>
+            <a href="https://discord.gg/P2FEVBz2PG" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_15px_rgba(99,102,241,0.5)] hover:-translate-y-0.5 flex items-center gap-2">
+                <i class="fab fa-discord"></i> Join Community
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-6xl mx-auto px-6 py-12 flex-grow flex flex-col justify-center w-full">
+        
+        <!-- Hero Title with Fade-in Animation -->
+        <section class="text-center mb-16 animate-fade-in">
+            <span class="bg-indigo-500/10 text-indigo-400 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest border border-indigo-500/20">
+                Premium Script Hub
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-6 mb-4 tracking-tight leading-tight">
+                Empower Your Game with <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-pink-500">Louis Hub</span>
+            </h1>
+            <p class="text-slate-400 max-w-2xl mx-auto text-base md:text-lg">
+                Gain access to fast, stable, and secure automation scripts. Tailored options to fit your preference—choose your access tier below.
+            </p>
+        </section>
+
+        <!-- Product Cards Grid -->
+        <div class="grid md:grid-cols-2 gap-8 items-stretch w-full">
+            
+            <!-- OPTION 1: FREE EDITION -->
+            <div class="bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-3xl p-8 flex flex-col justify-between hover:border-violet-500/30 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(139,92,246,0.05)]">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="bg-slate-800/80 text-violet-400 text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider border border-slate-700/50">Free Tier</span>
+                            <h2 class="text-2xl font-bold mt-3">Louis Hub Free</h2>
+                        </div>
+                        <span class="text-3xl font-extrabold text-slate-300">Free</span>
+                    </div>
+
+                    <p class="text-slate-400 text-sm mb-6">Access standard script functionalities. Great for players looking to explore core automation features.</p>
+
+                    <hr class="border-slate-800/60 mb-6">
+
+                    <!-- Free Benefits -->
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Included Features:</h3>
+                    <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-circle-check text-violet-500 mt-1"></i>
+                            <span>Access to standard auto-farming options and local adjustments.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-circle-check text-violet-500 mt-1"></i>
+                            <span>Routine safety patches aligned with general game updates.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-circle-check text-violet-500 mt-1"></i>
+                            <span>Standard community assistance on our public Discord server.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-circle-check text-violet-500 mt-1 text-slate-500"></i>
+                            <span class="text-slate-400">Requires daily key system verification to activate.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Interactive Code Block -->
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 mb-6 relative group">
+                        <span class="absolute top-2.5 right-3 text-[10px] text-slate-500 font-bold uppercase tracking-wider">Execute Script</span>
+                        <pre class="text-xs font-mono text-violet-300 overflow-x-auto whitespace-pre-wrap select-all pr-12 pt-2 scrollbar-thin" id="scriptBlock">loadstring(game:HttpGet("https://encrypt-x.pages.dev/Scripts?Id=5599602428829"))("5599602428829")</pre>
+                    </div>
+                </div>
+
+                <!-- Call to actions -->
+                <div class="space-y-3">
+                    <button onclick="copyToClipboard()" class="w-full bg-slate-800 hover:bg-slate-750 text-slate-200 hover:text-white font-semibold py-3.5 px-4 rounded-xl transition-all duration-200 border border-slate-700/50 flex items-center justify-center gap-2 group">
+                        <i id="copyIcon" class="far fa-copy group-hover:scale-110 transition-transform"></i>
+                        <span id="copyBtnLabel">Copy Script</span>
+                    </button>
+                    <a href="https://jnkie.com/get-key/jnkiecomget-keylouishub" target="_blank" class="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3.5 px-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]">
+                        <i class="fas fa-key"></i> Get Free Key
+                    </a>
+                </div>
+            </div>
+
+            <!-- OPTION 2: PREMIUM EDITION (With Float & Glow Animations) -->
+            <div class="bg-slate-900/60 backdrop-blur-md border-2 border-pink-500/40 rounded-3xl p-8 flex flex-col justify-between animate-float animate-pulse-glow relative overflow-hidden hover:border-pink-500/80 transition-all duration-300">
+                <div class="absolute top-0 right-0 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-[10px] font-black px-4 py-1.5 rounded-bl-xl uppercase tracking-widest shadow-md">
+                    Premium Tier
+                </div>
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="bg-pink-500/10 text-pink-400 text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider border border-pink-500/20">Unrestricted</span>
+                            <h2 class="text-2xl font-bold mt-3">Louis Hub Premium</h2>
+                        </div>
+                    </div>
+
+                    <p class="text-slate-400 text-sm mb-6">Unlock maximum efficiency. Ultimate features designed for elite users who value their time.</p>
+
+                    <hr class="border-slate-800/60 mb-6">
+
+                    <!-- Premium Benefits -->
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Premium Benefits:</h3>
+                    <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-crown text-pink-500 mt-1"></i>
+                            <span><strong>No-Key System:</strong> Instantly execute your script without going through annoying ad links.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-bolt text-pink-500 mt-1"></i>
+                            <span><strong>Exclusive Speed Autocomplete:</strong> Features custom, advanced auto-farming designed to be extremely fast and secure.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-shield-halved text-pink-500 mt-1"></i>
+                            <span><strong>Priority Safety Patches:</strong> First-in-line updates guaranteeing instant bypasses for game anti-cheat structures.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-life-ring text-pink-500 mt-1"></i>
+                            <span><strong>VIP Customer Support:</strong> Direct, fast support channels in our Discord server for setup assistance.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Detailed Price List -->
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Pricing Options:</h3>
+                    <div class="grid grid-cols-2 gap-3 mb-8">
+                        <!-- PayPal -->
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 text-xs">
+                            <div class="font-bold text-slate-200 flex items-center gap-1 mb-1.5">
+                                <i class="fab fa-paypal text-blue-400"></i> PayPal
+                            </div>
+                            <p class="text-slate-400">1 Month: <span class="text-pink-400 font-bold">$3 USD</span></p>
+                            <p class="text-slate-400">Lifetime: <span class="text-pink-400 font-bold">$8 USD</span></p>
+                        </div>
+                        <!-- Dana -->
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 text-xs">
+                            <div class="font-bold text-slate-200 flex items-center gap-1 mb-1.5">
+                                <i class="fas fa-wallet text-sky-400"></i> DANA (IDN)
+                            </div>
+                            <p class="text-slate-400">1 Month: <span class="text-pink-400 font-bold">Rp 20,000</span></p>
+                            <p class="text-slate-400">Lifetime: <span class="text-pink-400 font-bold">Rp 60,000</span></p>
+                        </div>
+                        <!-- Robux -->
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 text-xs">
+                            <div class="font-bold text-slate-200 flex items-center gap-1 mb-1.5">
+                                <i class="fas fa-coins text-yellow-500"></i> Robux
+                            </div>
+                            <p class="text-slate-400">1 Month: <span class="text-pink-400 font-bold">150 R$</span></p>
+                            <p class="text-slate-400">Lifetime: <span class="text-pink-400 font-bold">450 R$</span></p>
+                        </div>
+                        <!-- Server Boost -->
+                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800/60 text-xs">
+                            <div class="font-bold text-slate-200 flex items-center gap-1 mb-1.5">
+                                <i class="fas fa-rocket text-fuchsia-400"></i> Server Boost
+                            </div>
+                            <p class="text-slate-400">1 Month: <span class="text-pink-400 font-bold">1x Boost (Monthly)</span></p>
+                            <p class="text-slate-400">Lifetime: <span class="text-pink-400 font-bold">2x Boosts (Monthly)</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://discord.gg/P2FEVBz2PG" target="_blank" class="w-full bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:from-pink-600 hover:via-purple-700 hover:to-indigo-700 text-white font-bold py-4 px-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(236,72,153,0.5)] transform hover:-translate-y-1">
+                    <i class="fab fa-discord text-lg"></i> Purchase via Discord Ticket
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-500 bg-slate-950/30">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Louis Hub. Developed with high care for the gaming community.</p>
+            <div class="flex gap-4">
+                <a href="https://discord.gg/P2FEVBz2PG" target="_blank" class="hover:text-slate-300 transition-colors">Discord Server</a>
+                <span class="text-slate-800">|</span>
+                <span class="text-slate-600">No Key Exploit Store</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copy Success Toast Notification -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 bg-slate-900 border border-emerald-500/30 text-emerald-400 px-5 py-3.5 rounded-2xl shadow-2xl text-sm font-semibold opacity-0 pointer-events-none transition-all duration-300 z-50 flex items-center gap-3">
+        <div class="bg-emerald-500/10 p-1.5 rounded-lg">
+            <i class="fas fa-check"></i>
+        </div>
+        <span>Script copied successfully to clipboard!</span>
+    </div>
+
+    <!-- JS Logic -->
+    <script>
+        function copyToClipboard() {
+            const scriptText = document.getElementById('scriptBlock').innerText;
+            navigator.clipboard.writeText(scriptText).then(() => {
+                const toast = document.getElementById('toastNotification');
+                const btnLabel = document.getElementById('copyBtnLabel');
+                const copyIcon = document.getElementById('copyIcon');
+                
+                // Visual feedback in button
+                btnLabel.innerText = "Copied!";
+                copyIcon.className = "fas fa-check text-emerald-400";
+                
+                // Toast notification entry
+                toast.classList.remove('opacity-0', 'pointer-events-none');
+                toast.classList.add('translate-y-[-10px]');
+                
+                setTimeout(() => {
+                    // Reset toast
+                    toast.classList.add('opacity-0', 'pointer-events-none');
+                    toast.classList.remove('translate-y-[-10px]');
+                    
+                    // Reset button
+                    btnLabel.innerText = "Copy Script";
+                    copyIcon.className = "far fa-copy group-hover:scale-110";
+                }, 2500);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
